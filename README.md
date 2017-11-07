@@ -1,2 +1,2 @@
 # Snake-lncRNA
-![avatar](./dag.pdf)
+![avatar](./dag.png)
