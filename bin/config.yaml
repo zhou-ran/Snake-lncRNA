@@ -1,0 +1,43 @@
+#sample
+datapath: 
+ sample_path: /home/jiajinbu/nas3/zhouran/proj/10-24-Pi-potato/raw_data
+ gtf_path: /home/jiajinbu/bu/data/genome/Solanum_tuberosum_potato/2014/hisat2/genome.gtf
+ genome_path: /home/jiajinbu/bu/data/genome/Solanum_tuberosum_potato/2014/potato_dm_v404_all_pm_un.fasta
+ index_path: /home/jiajinbu/bu/data/genome/Solanum_tuberosum_potato/2014/hisat2/potato
+#soft
+trimmomatic: /home/jiajinbu/bu/soft/bio/trimmomatic/Trimmomatic-0.36/trimmomatic-0.36.jar
+trans_cds: /home/jiajinbu/bu/soft/bio/transdecoder/TransDecoder-3.0.0/util/cufflinks_gtf_genome_to_cdna_fasta.pl
+trans_gff3: /home/jiajinbu/bu/soft/bio/transdecoder/TransDecoder-3.0.0/util/cufflinks_gtf_to_alignment_gff3.pl
+outputpath:
+ trimmomatic: data/trimmomatic/
+ hisat2: data/hisat2/
+ stringtie: data/stringtie/
+ cuffquant: data/cuffquant/
+ cuffdiff: data/cuffdiff/
+ gffcompare: data/gffcompare/
+ ballgown: data/ballgown/
+ transdecoder: data/transdecoder/
+ predict: data/Lnc_predict/
+#hisat2
+Min_intron: 20
+Max_intron: 15000
+Strand_specific: "RF"
+#--rna-strandness FR
+thread: 4
+Hisat2_splicesite: "/home/jiajinbu/bu/data/genome/Solanum_tuberosum_potato/2014/hisat2/splicesites.txt"
+#if there is a splicesite file in index,so it's blank [--known-splicesite-infile yourfile],"\u0020"
+
+cuff_lib_type: --library-type fr-firststrand
+#"\u0020"
+#--library-type fr-firststrand
+
+sample:
+ - BC
+ - B6
+ - B12
+ - B24
+ - B72
+duplication:
+ - 1
+ - 2
+ - 3
